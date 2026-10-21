@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="trivialGeografico.PaisesPage"
+             Title="Adivina la Capital">
+
+    <Grid>
+        <!-- Imagen de fondo-->
+        <Image Source="paises.jpg" 
+               Aspect="AspectFill" />
+
+        <!-- Overlay semitransparente -->
+        <BoxView Color="#1A2B4C" Opacity="0.7" />
+
+        <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="Center">
+
+            <Border BackgroundColor="#40000000" 
+                    StrokeShape="RoundRectangle 15" 
+                    Stroke="Transparent" 
+                    Padding="20" 
+                    Margin="0,0,0,20">
+                <Label x:Name="PreguntaLabel" 
+                       FontSize="24" 
+                       FontAttributes="Bold" 
+                       HorizontalTextAlignment="Center" 
+                       TextColor="White"/>  
+            </Border>
+
+            <Button x:Name="BtnOpcion1" Style="{StaticResource ModernButton}" Clicked="OnOpcionClicked"/>
+            <Button x:Name="BtnOpcion2" Style="{StaticResource ModernButton}" Clicked="OnOpcionClicked"/>
+            <Button x:Name="BtnOpcion3" Style="{StaticResource ModernButton}" Clicked="OnOpcionClicked"/>
+            <Button x:Name="BtnOpcion4" Style="{StaticResource ModernButton}" Clicked="OnOpcionClicked"/>
+
+            <Button x:Name="BtnSiguiente" 
+                    Text="Siguiente país" 
+                    Style="{StaticResource ActionButton}" 
+                    IsVisible="False" 
+                    Clicked="OnSiguienteClicked"
+                    Margin="0,20,0,0"
+                    BackgroundColor="#FF9800"/>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
